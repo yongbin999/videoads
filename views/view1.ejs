@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Enrise - Video Ads Displays</title>
+
+    <% include ./partials_template/header %>
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <div class="list-group"> <!-- use for loop to show all list obj -->
+                           <div class="col-sm-12">
+
+
+                                <div class="embed-responsive embed-responsive-16by9"  id="clicktoview">
+                                    <iframe class="embed-responsive-item" src="/videos/test1.mp4"></iframe>
+                                </div>
+
+                                <div class="embed-responsive embed-responsive-16by9"  id="clicktoview">
+                                    <iframe class="embed-responsive-item" src="/videos/test2.mp4"></iframe>
+                                </div>
+
+                                <div class="embed-responsive embed-responsive-16by9"  id="clicktoview">
+                                    <iframe class="embed-responsive-item" src="/videos/test3.mp4"></iframe>
+                                </div>
+
+                            </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                           <div class="col-sm-30"><!-- main ad -->
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="/videos/testvideo.mp4"></iframe>
+                                </div>
+
+                            </div>
+            </div>
+
+        </div><!-- row -->
+
+    </div><!-- /.container -->
+
+
+    <% include ./partials_template/footer %>
+
+</body>
+
+</html>
