@@ -9,6 +9,9 @@ router.get('/', function(req, res) {
 router.get('/test', function(req, res) {
             res.render('view1');
 });
+router.get('/test1', function(req, res) {
+            res.render('view1');
+});
 
 router.get('/test2', function(req, res) {
             res.render('view2');

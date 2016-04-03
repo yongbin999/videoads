@@ -1,34 +1,37 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<header>
- <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
+<head>
+    <title>Enrise - Video Ads Displays</title>
 
-    <!-- Custom styles for this template -->
-    <link href="/css/main.css" rel="stylesheet">
+    <% include ./partials_template/header %>
 
-</header>
+</head>
+
 <body>
-<h1>Bootstrap 3 Responsive Video Embeds that Maintain Aspect Ratio <i class="fa fa-heart"></i></h1>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-   
-      <h2>16:9 Responsive Aspect Ratio</h2>
-<div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
-</div>
-    </div>
-    <div class="col-sm-6">
- 
+    <!-- Page Content -->
+    <div class="container">
 
-      <h2>4:3 Responsive Aspect Ratio</h2>
-<div class="embed-responsive embed-responsive-4by3">
-    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/ePbKGoIGAXY"></iframe>
-</div>
-    </div>
-  </div>
-</div>
+        <div class="row">
+
+            <div class="col-md-3">
+                    <a href="/test1"> all ads play at the sametime </a>
+            </div>
+
+            <div class="col-md-3">
+
+                    <a href="/test2"> only main ad plays </a>
+            </div>
+
+
+        </div><!-- row -->
+
+    </div><!-- /.container -->
+
+
+    <% include ./partials_template/footer %>
+
 </body>
+
 </html>
