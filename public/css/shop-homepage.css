@@ -7,6 +7,8 @@
 body {
 
   background: black;
+    padding-top: 5%; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
 }
 
 .slide-image {
@@ -48,8 +50,4 @@ body {
 .thumbnail .caption-full {
     padding: 9px;
     color: #333;
-}
-
-footer {
-    margin: 50px 0;
 }
