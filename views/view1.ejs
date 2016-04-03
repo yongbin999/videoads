@@ -62,8 +62,9 @@
 
     </div><!-- /.container -->
 
-<script>
-  $('#clicktoview').on('click', function () {
+<!-- trying to do on-click switch the video -->
+<script> 
+  $('#clicktoview').on('click', function (this.attr.src) {
     $('#mainvideo').attr('src', '/videos/test1.mp4');
     console.log("hey");
   });
