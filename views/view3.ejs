@@ -41,7 +41,9 @@
 <script>
 flowplayer(function (api, root) {
   api.on("load", function () {
-    api.fullscreen();
+    if (api.isFullscreen==false){
+      api.fullscreen();
+    }
   });
 
 });
