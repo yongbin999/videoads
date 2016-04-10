@@ -6,83 +6,96 @@
 
     <% include ./partials_template/header %>
 
+    <link href="/css/videoplayer.css" rel="stylesheet">
+       <!-- optimize mobile versions -->
+   <!-- optimize mobile versions -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- The "minimalist" skin, "functional.css", "minimalist.css" and "playful.css" are available -->
+   <link rel="stylesheet" href="//releases.flowplayer.org/6.0.5/skin/minimalist.css">
+
+   <!-- Minimal styling for this standalone page (can be removed) -->
+   <style>
+   body {
+      font-family: "myriad pro", tahoma, verdana, arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+   }
+   #content {
+      margin: 50px auto;
+      max-width: 982px;
+   }
+   
+</style>
+
+   <!-- CSS for this demo -->
+   <link rel="stylesheet" href="//flowplayer.org/media/css/demos/playlist/classic.css">
+   
+      <!-- Flowplayer depends on jquery for video tag based setups -->
+   <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+   
+   <!-- Flowplayer-->
+   <script src="//releases.flowplayer.org/6.0.5/flowplayer.min.js"></script>
+
+   <!-- Flowplayer hlsjs engine for smoother HLS playback in modern browsers (optional) -->
+   <script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
+
+
+<!-- quality selector stylesheet for HLS level selection -->
+<link rel="stylesheet" href="//releases.flowplayer.org/quality-selector/flowplayer.quality-selector.css">
+
+<!-- hlsjs plugin -->
+<script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js"></script>
+
+<script>
+// wait until DOM is ready
+$(function () {
+
+    // manual installation into container element with id="classic"
+    $("#classic").flowplayer({
+        splash: true,
+        ratio: 9/16,
+        // HLS level selection provided by hlsjs plugin
+        hlsQualities: [1, 3, 6, 7],
+        embed: {
+            // include the whole playlist when embedding
+            playlist: true,
+            // embed with same skin
+            skin: "//releases.flowplayer.org/6.0.5/skin/minimalist.css"
+        }
+    });
+
+});
+</script>
+
 </head>
 
 <body>
+<div id="content">
 
-    <!-- Page Content -->
-    <div class="container">
+<div id="classic" class="is-closeable">
 
-        <div class="row">
+   <video>
+      <source type="application/x-mpegurl"
+              src="//stream.flowplayer.org/night3.m3u8">
+      <source type="video/webm"
+              src="//stream.flowplayer.org/night3.webm">
+      <source type="video/mp4"
+              src="//stream.flowplayer.org/night3.mp4">
+      </video>
 
-            <div class="col-md-3">
-                <div class="list-group"> <!-- use for loop to show all list obj -->
-                           <div class="col-sm-12">
+   <div class="fp-playlist">
+      <a href="//stream.flowplayer.org/night3.mp4" id="thumb1"></a>
+      <a href="//stream.flowplayer.org/night5.mp4" id="thumb2"></a>
+      <a href="//stream.flowplayer.org/night6.mp4" id="thumb3"></a>
+      <a href="//stream.flowplayer.org/night1.mp4" id="thumb4"></a>
+   </div>
 
-                            <% include ./partials_template/video_menu %>
-
-                                <div class="embed-responsive embed-responsive-4by3"  id="clicktoview">
-                                    	<source media="(min-width: 465px)" 
-										    srcset="/img/kendricks.png,
-										            /img/kendricks.png 0.25x
-										            /img/kendricks.png 0.5x">                                    	
-										    <source media="(min-width: 800px)" 
-										    srcset="/img/kendricks.png,
-										            /img/kendricks.png 0.25x
-										            /img/kendricks.png 0.5x">                                    	
-										    <source media="(min-width: 1000px)" 
-										    srcset="/img/kendricks.png,
-										            /img/kendricks.png 0.25x
-										            /img/kendricks.png 0.5x">
-										  <img src="/img/kendricks.png" style="width:250px;">
-
-                                </div>
-
-                                <div class="embed-responsive embed-responsive-4by3"  id="clicktoview">                                    
-                                    <video controls loop muted >
-                                      <source src="/videos/test2.mp4" type="video/mp4" allowfullscreen>
-                                      Your browser does not support HTML5 video.
-                                    </video>
-                                </div>
-
-                                <div class="embed-responsive embed-responsive-4by3"  id="clicktoview">
-                                    <video controls loop muted >
-                                      <source src="/videos/test3.mp4" type="video/mp4" allowfullscreen>
-                                      Your browser does not support HTML5 video.
-                                    </video>
-                                </div>
-
-                            </div>
-                </div>
-            </div>
-
-            <div class="col-md-9">
-                           <div class="col-sm-30" ><!-- main ad -->
-                                <div class="embed-responsive embed-responsive-16by9">
-                                    <video controls autoplay loop muted >
-                                      <source src="/videos/testvideo.mp4" type="video/mp4" allowfullscreen>
-                                      Your browser does not support HTML5 video.
-                                    </video>
-                                </div>
-
-                            </div>
-            </div>
-
-        </div><!-- row -->
-
-    </div><!-- /.container -->
-
-<script>
-  $('#clicktoview').on('click', function () {
-    $('#mainvideo').attr('src', '/videos/test1.mp4');
-    console.log("hey");
-  });
-  $('#myModal').on('hide', function () {
-    $('div.modal-body iframe#youtube').attr('src', '');
-  });
-</script>
+</div>
 
 
+</div><!--/end content -->
 </body>
 
 </html>

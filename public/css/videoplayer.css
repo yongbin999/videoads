@@ -1,0 +1,82 @@
+#classic {
+/* player (and playlist) background */
+  background: #333 url("/media/img/demos/playlist/bakers.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+/* player (and playlist) background */
+#classic.is-loading {
+/* override background image when clip changes */
+  background: #333;
+}
+/* override background image when clip changes */
+#classic .fp-playlist {
+/* playlist */
+  position: absolute;
+  bottom: 32%;
+  left: 11%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 12;
+  -webkit-box-shadow: 0 0 30px #333;
+  -moz-box-shadow: 0 0 30px #333;
+  box-shadow: 0 0 30px #333;
+}
+/* playlist */
+#classic .fp-playlist a {
+/* playlist entry */
+  float: left;
+  width: 170px;
+  height: 170px;
+  margin: 0 5px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 4px solid #333;
+  background: url("/media/img/demos/playlist/thumbs.jpg") -1px -1px no-repeat;
+}
+/* playlist entry */
+#classic .fp-playlist a:hover,
+#classic .fp-playlist a.is-active {
+  border-color: #fff;
+}
+#classic .fp-playlist #thumb2 {
+  background-position: -197px -1px;
+}
+#classic .fp-playlist #thumb3 {
+  background-position: -393px -1px;
+}
+#classic .fp-playlist #thumb4 {
+  background-position: -589px -1px;
+}
+/* change position and size when playback starts */
+#classic.is-ready .fp-playlist,
+#classic.is-loading .fp-playlist {
+  bottom: 6%;
+  left: 1%;
+}
+#classic.is-ready .fp-playlist a,
+#classic.is-loading .fp-playlist a {
+  width: 70px;
+  height: 70px;
+}
+@media (max-width: 900px) {
+  #classic .fp-playlist a {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media (max-width: 700px) {
+  #classic .fp-playlist a {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 570px) {
+  #classic .fp-playlist a {
+    width: 55px;
+    height: 55px;
+  }
+}
