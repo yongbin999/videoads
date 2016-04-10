@@ -17,6 +17,9 @@ router.get('/test2', function(req, res) {
             res.render('view2');
 });
 
+router.get('/test3', function(req, res) {
+            res.render('view3');
+});
 
 router.get('/about', function(req, res) {
             res.render('about');
