@@ -20,6 +20,9 @@ router.get('/test2', function(req, res) {
 router.get('/test3', function(req, res) {
             res.render('view3');
 });
+router.get('/test4', function(req, res) {
+            res.render('view4');
+});
 
 router.get('/about', function(req, res) {
             res.render('about');
