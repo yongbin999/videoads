@@ -1,0 +1,75 @@
+body {
+
+  background: black;
+}
+   #content {
+      margin:  auto;
+   }
+
+.flowplayer .fp-player {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+.flowplayer .fp-engine, .flowplayer .fp-ui, .flowplayer .fp-message {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 80%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+   #classic {
+/* player (and playlist) background */
+  background: #333 url("/media/img/demos/playlist/bakers.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+/* player (and playlist) background */
+#classic.is-loading {
+/* override background image when clip changes */
+  background: #333;
+}
+/* override background image when clip changes */
+#classic .fp-playlist {
+/* playlist */
+  position: absolute;
+  height:95%;
+  left: 1%;
+    width: 18%;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 12;
+  -webkit-box-shadow: 0 0 30px #333;
+  -moz-box-shadow: 0 0 30px #333;
+  box-shadow: 0 0 30px #333;
+}
+/* playlist */
+#classic .fp-playlist a {
+/* playlist entry */
+  float: left;
+  width: 20%;
+  height: 0%;
+  margin: 0 5px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 4px solid #333;
+  background: url("/media/img/demos/playlist/thumbs.jpg") -1px -1px no-repeat;
+}
+
+#classic.is-ready .fp-playlist, #classic.is-loading .fp-playlist {
+    bottom: 0%;
+    left: 1%;
+}
+#classic.is-ready .fp-playlist a, #classic.is-loading .fp-playlist a {
+    margin: 1%;
+    width: 85%;
+    height: 20%;
+}
