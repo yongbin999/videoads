@@ -23,6 +23,9 @@ router.get('/test3', function(req, res) {
 router.get('/test4', function(req, res) {
             res.render('view4');
 });
+router.get('/test5', function(req, res) {
+            res.render('view5');
+});
 
 router.get('/about', function(req, res) {
             res.render('about');
