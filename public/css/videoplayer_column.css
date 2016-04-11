@@ -38,9 +38,10 @@ body {
 /* override background image when clip changes */
 #classic .fp-playlist {
 /* playlist */
- overflow: auto;
+ overflow-y: auto;
+ overflow-x: hidden;
   position: absolute;
-  height:95%;
+  top:5%;
   left: 1%;
     width: 18%;
   -webkit-transition: all 0.5s;
@@ -66,7 +67,7 @@ body {
 }
 
 #classic.is-ready .fp-playlist, #classic.is-loading .fp-playlist {
-    bottom: 0%;
+    bottom: 5%;
     left: 1%;
 }
 #classic.is-ready .fp-playlist a, #classic.is-loading .fp-playlist a {
