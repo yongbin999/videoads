@@ -39,8 +39,9 @@ body {
 #classic .fp-playlist {
 /* playlist */
   position: absolute;
-  top:10%;
-  left: 0%;
+  height:95%;
+  left: 1%;
+    width: 18%;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -54,11 +55,20 @@ body {
 /* playlist entry */
   float: left;
   width: 20%;
-  height: 250px;
+  height: 0%;
   margin: 0 5px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
   border: 4px solid #333;
   background: url("/media/img/demos/playlist/thumbs.jpg") -1px -1px no-repeat;
+}
+
+#classic.is-ready .fp-playlist, #classic.is-loading .fp-playlist {
+    bottom: 0%;
+    left: 1%;
+}
+#classic.is-ready .fp-playlist a, #classic.is-loading .fp-playlist a {
+    margin: 1%;
+    width: 85%;
 }
